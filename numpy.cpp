@@ -19,6 +19,9 @@ class numpy {       // The class
     int suma();
     int resta();
     int multiplicacion();
+    int maximo();
+    int minimo();
+    
 };
 
 int numpy::suma(){
@@ -34,6 +37,36 @@ int numpy::multiplicacion(){
     return num1*num2*num3;
 }
 
+int numpy::maximo(){
+    cout << "El numero maximo es: " ; 
+     int max;
+    if (num1 > num2 && num1 > num3){
+		max = num1;
+	}
+	if (num2 > num1 && num2 > num3){
+		max = num2;
+	}
+	if (num3 > num1 && num3 > num2){
+		max = num3;
+	}
+	return max;
+	}
+
+int numpy::minimo(){
+    cout << "El numero minimo es: " ; 
+    int min;
+    if (num1 < num2 && num1 < num3){
+		min = num1;
+	}
+	if (num2 < num1 && num2 < num3){
+		min = num2;
+	}
+	if (num3 < num1 && num3 < num2){
+		min = num3;
+	}
+	return min;
+	}
+
 
 int main() {
     
@@ -43,6 +76,10 @@ int main() {
     cout << operacion.resta();
     cout << endl;
     cout << operacion.multiplicacion();
+    cout << endl;
+    cout << operacion.maximo();
+    cout << endl;
+    cout << operacion.minimo();
     cout << endl;
     
 
